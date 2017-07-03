@@ -1,0 +1,30 @@
+{
+  "name": "allex_servicescaffoldingsdklib",
+  "version": "1.0.0",
+  "description": "AllexJS sdk library for scaffolding Services",
+  "main": "index.js",
+  "scripts": {
+    "test": "allex-mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allex-sdk-libs/servicescaffolding.git"
+  },
+  "dependencies": {
+    "hersswig": "1.x",
+    "yargs": "8.x"
+  },
+  "keywords": [
+    "ecosystem:AllexJS",
+    "sdk",
+    "lib",
+    "service",
+    "scaffolding"
+  ],
+  "author": "Andrija Petrovic <andrija.hers@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allex-sdk-libs/servicescaffolding/issues"
+  },
+  "homepage": "https://github.com/allex-sdk-libs/servicescaffolding#readme"
+}
