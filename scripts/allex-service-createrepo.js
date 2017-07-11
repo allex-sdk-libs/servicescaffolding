@@ -21,7 +21,7 @@ function run (argv) {
     plainwriter({},'remotesinkinfo.js','remotesinkinfo');
   }
 
-  require('../scaffolding/servicecreator')(argv);
+  require('../scaffolding/servicecreator')(execlib, argv);
   argv = null;
 }
 

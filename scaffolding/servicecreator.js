@@ -1,5 +1,5 @@
-function createService(opts){
-  var recognizer = require('./recognizer'),
+function createService(execlib, opts){
+  var recognizer = require('./recognizer')(execlib),
      typer = require('./typer');
   opts.userizer = function(str){
       return str.replace(/user$/i,'');
