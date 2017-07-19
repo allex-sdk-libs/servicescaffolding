@@ -27,7 +27,11 @@ function createServiceYargs (execlib) {
   'use strict';
   var argv = require('yargs')
       .option('a', {
-        'alias': 'alias',
+        'alias': 'author',
+        'default': 'HERS Belgrade'
+      })
+      .option('u', {
+        'alias': 'username',
         'default': 'allex'
       })
       .demand('p')
@@ -57,7 +61,7 @@ function createServiceYargs (execlib) {
     return argv.namespace ? '_'+argv.namespace.toLowerCase()+'_' : '_';
   }
 
-  argv.module_name = argv.alias+'_'+argv.namespaceizer()+argv.prefix.toLowerCase()+'service';
+  argv.module_name = argv.username+'_'+argv.namespaceizer()+argv.prefix.toLowerCase()+'service';
   return execlib.lib.moduleRecognition(argv.module_name).then(onRecognize.bind(null, execlib, argv));
 }
 

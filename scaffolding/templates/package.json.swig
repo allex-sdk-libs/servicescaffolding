@@ -15,7 +15,7 @@
     "Service",
     "{{prefix}}"
   ],
-  "author": "HERS Belgrade",
+  "author": "{{author|raw}}",
   "license": "ISC"
 }
 

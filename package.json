@@ -1,6 +1,6 @@
 {
   "name": "allex_servicescaffoldingsdklib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AllexJS sdk library for scaffolding Services",
   "main": "index.js",
   "scripts": {
