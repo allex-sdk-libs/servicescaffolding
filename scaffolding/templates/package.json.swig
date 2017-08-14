@@ -1,6 +1,6 @@
 {
   "name": "{{module_name}}",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "{{prefix}}Service",
   "main": "{{output}}",
   "scripts": {
