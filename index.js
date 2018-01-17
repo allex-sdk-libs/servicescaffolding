@@ -5,7 +5,7 @@ function requirer (path) {
   return function () {
     var r = require(Path.join(__dirname, 'scripts', path));
     if (_execlib.lib.isFunction(r)) {
-      r(execlib);
+      r(_execlib);
     }
   }
 }

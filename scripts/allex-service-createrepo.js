@@ -1,9 +1,9 @@
 function createAllexServiceRepo (execlib) {
   'use strict';
-  require('../scaffolding/serviceyargs')(execlib).then(run);
+  require('../scaffolding/serviceyargs')(execlib).then(run.bind(null, execlib));
 }
 
-function run (argv) {
+function run (execlib, argv) {
   var fs = require('fs'),
     plainwriter = require('../scaffolding/plainwriter'),
     path = require('path'),
