@@ -1,9 +1,7 @@
 function sinkMapCreator(execlib, ParentSinkMap) {
   'use strict';
-  var sinkmap = new (execlib.lib.Map);
-  {% for role in roles -%}
-    sinkmap.add('{{role}}', require('./sinks/{{role}}sinkcreator')(execlib, ParentSinkMap.get('{{role}}')));
-  {% endfor %}
+  var sinkmap = require('./websinkmapcreator')(execlib, ParentSinkMap);
+  //add roles that should not be visible to the browser
   return sinkmap;
 }
 

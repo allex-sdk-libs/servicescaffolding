@@ -13,8 +13,9 @@ function createService(execlib, opts){
   opts.isOfUserType = typer(opts.type, 'user');
   require('./plainwriter')(opts,'','index');
   require('./websidecreator')(opts);
+  require('./plainwriter')(opts,'websinkmapcreator.js','websinkmapcreator');
   require('./plainwriter')(opts,'sinkmapcreator.js','sinkmapcreator');
-  require('./plainwriter')(opts,'clientside.js','clientside');
+  //require('./plainwriter')(opts,'clientside.js','clientside');
   require('./plainwriter')(opts,'servicecreator.js','service');
 
   function roleizer(opts,item){
