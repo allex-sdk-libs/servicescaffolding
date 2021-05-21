@@ -52,7 +52,10 @@ function createServiceYargs (execlib) {
       .alias('t','type')
       .demand('n')
       .alias('n','namespace')
-      .default({p:'',f:false,o:'index.js',i:'.',r:[],d:[],t:null,n:''})
+      .demand('e')
+      .alias('e','extensions')
+      .array('e')
+      .default({p:'',f:false,o:'index.js',i:'.',r:[],d:[],t:null,n:'',e:[]})
       .argv;
   argv.namespaceizer = function(){
     return argv.namespace ? '_'+argv.namespace.toLowerCase()+'_' : '';
