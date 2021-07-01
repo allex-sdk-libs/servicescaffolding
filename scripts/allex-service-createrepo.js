@@ -1,6 +1,6 @@
 function createAllexServiceRepo (execlib) {
   'use strict';
-  require('../scaffolding/serviceyargs')(execlib).then(run.bind(null, execlib));
+  require('../scaffolding/serviceyargs')(execlib).then(run.bind(null, execlib), console.error.bind(console, 'Error:'));
 }
 
 function run (execlib, argv) {
@@ -14,7 +14,7 @@ function run (execlib, argv) {
   }
   plainwriter(argv,'package.json','package.json');
   plainwriter(argv,'README.md','README');
-  plainwriter({},'.gitignore','gitignore');
+  plainwriter(argv,'.gitignore','gitignore');
 
   if(argv.roles.indexOf('user') >= 0 && argv.type === 'user'){
     plainwriter({},'localsinkinfo.js','localsinkinfo');

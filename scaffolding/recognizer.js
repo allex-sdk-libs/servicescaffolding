@@ -26,7 +26,8 @@ function createRecognizer (execlib) {
   }
 
   function prepare(opts) {
-    var ds = opts.depends.length ? opts.depends.slice() : [];
+    var ds, exts;
+    ds = opts.depends.length ? opts.depends.slice() : [];
     if (opts.depends.length) {
       opts.serviceextravars = commastring+opts.depends.map(varname).join(commastring);
     }
@@ -51,6 +52,10 @@ function createRecognizer (execlib) {
     } else {
       opts.parentmodulename = "'.'";
       opts.parentservicepackname = plaininheritstring;
+    }
+    exts = opts.extensions.length ? opts.extensions.slice() : [];
+    if (exts.indexOf('dotnet') >= 0) {
+      opts.dotnetnamespace = opts.username+(opts.namespace ? '.'+opts.namespace : '')+(opts.prefix ? '.'+opts.prefix : '');
     }
   }
 

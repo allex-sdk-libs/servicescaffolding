@@ -32,7 +32,7 @@ function createServiceYargs (execlib) {
       })
       .option('u', {
         'alias': 'username',
-        'default': 'allex'
+        'default': 'AllEx'
       })
       .demand('p')
       .alias('p','prefix')
@@ -64,7 +64,11 @@ function createServiceYargs (execlib) {
     return argv.namespace ? '_'+argv.namespace.toLowerCase()+'_' : '_';
   }
 
-  argv.module_name = argv.username+'_'+argv.namespaceizer()+argv.prefix.toLowerCase()+'service';
+  argv.module_name = argv.username.toLowerCase()+'_'+argv.namespaceizer()+argv.prefix.toLowerCase()+'service';
+  if (argv.extensions.indexOf('dotnet') >= 0) {
+    argv.isDotNet = true;
+  }
+
   return execlib.lib.moduleRecognition(argv.module_name).then(onRecognize.bind(null, execlib, argv));
 }
 

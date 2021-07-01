@@ -4,7 +4,8 @@
   "description": "{{prefix}}Service",
   "main": "{{output}}",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha"{% if (isDotNet) %},
+    "postinstall": "cd dotnet && dotnet build"{% endif %}
   },
   "repository": {
     "type": "git",
