@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <WorkRoot>..\..\..\..\Work</WorkRoot>
+    <WorkRoot Condition="'$(WorkRoot)' == '' ">..\..\..\..\Work</WorkRoot>
     <AllexFundamentalsRoot>$(WorkRoot)\AllexFundamentals</AllexFundamentalsRoot>
     <RecordsSolutionRoot>$(WorkRoot)\RECORDS_SOLUTION_NAME</RecordsSolutionRoot>
     <RecordsProjectName>RECORDS_PROJECT_NAME</RecordsProjectName>

@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <WorkRoot>..\..\..\..\Work</WorkRoot>
-    <AllexFundamentalsRoot>$(WorkRoot)\AllexFundamentals</AllexFundamentalsRoot>
+    <AllexWorkRoot Condition="'$(AllexWorkRoot)' == '' ">..\..\..\..\Work</AllexWorkRoot>
+    <AllexFundamentalsRoot>$(AllexWorkRoot)\AllexFundamentals</AllexFundamentalsRoot>
   </PropertyGroup>
 
   <ItemGroup>
